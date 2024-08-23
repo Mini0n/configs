@@ -1,0 +1,9 @@
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,0,0)'
+background-transparency-percent=5
+foreground-color='rgb(208,207,204)'
+palette=['rgb(44,49,60)', 'rgb(225,32,48)', 'rgb(115,181,68)', 'rgb(209,129,61)', 'rgb(60,129,227)', 'rgb(134,39,216)', 'rgb(46,148,145)', 'rgb(126,137,143)', 'rgb(71,77,80)', 'rgb(208,98,134)', 'rgb(85,186,116)', 'rgb(192,164,108)', 'rgb(51,169,220)', 'rgb(192,75,213)', 'rgb(46,186,173)', 'rgb(255,255,255)']
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='mini0n'
