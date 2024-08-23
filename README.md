@@ -3,4 +3,4 @@
 Configs &amp; stuff
 
 ### Tilix One Dark Theme
-![ss](tilix_theme.png)
+![tilix ss](https://github.com/Mini0n/configs/blob/master/Tilix/tilix_theme.png)
