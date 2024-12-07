@@ -9,4 +9,6 @@ Configs &amp; stuff
 Fonts, wallpapers.
 Needs to be pass protected due to © bs.
 
-pass: "#{lena[0..3]140[1..3]}='3pi/2'"
+pass: 
+
+"#{\"k4d1n\"[0..3] + :140([0..3])} =='3pi/2'" ? => $ true
