@@ -2,13 +2,10 @@
 
 Configs &amp; stuff
 
-### Tilix One Dark Theme
-![tilix ss](https://github.com/Mini0n/configs/blob/master/Tilix/tilix_theme.png)
+### Things should look kinda like this
+![Screenshot from 2025-04-10 05-07-06](https://github.com/user-attachments/assets/2eec4716-6df2-4b46-ac8b-969b542fa2cd)
+
 
 #### Theme_pass.zip
-Fonts, wallpapers.
-Needs to be pass protected due to © bs.
-
 pass: 
-
 "#{\"k4d1n\"[0..3] + :140([0..3])} =='3pi/2'" ? => $ true
