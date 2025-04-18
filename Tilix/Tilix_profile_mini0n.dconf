@@ -1,0 +1,27 @@
+[/]
+background-color='#030301010909'
+background-transparency-percent=4
+badge-color-set=false
+bold-color-set=false
+cursor-blink-mode='system'
+cursor-colors-set=false
+cursor-shape='block'
+custom-command='tmux'
+default-size-columns=100
+default-size-rows=35
+draw-margin=100
+exit-action='close'
+font='Fira Code 8.5'
+foreground-color='#8E9A9F'
+highlight-colors-set=false
+login-shell=true
+palette=['#2C313C', '#E12030', '#73B544', '#D1813D', '#3C81E3', '#8627D8', '#2E9491', '#7E898F', '#474D50', '#D06286', '#55BA74', '#C0A46C', '#33A9DC', '#C04BD5', '#2EBAAD', '#FFFFFF']
+scroll-on-output=true
+scrollback-lines=10192
+terminal-bell='sound'
+terminal-title=' 🛸 ${id} : ${title}'
+text-blink-mode='always'
+use-custom-command=true
+use-system-font=false
+use-theme-colors=false
+visible-name='mini0n'
