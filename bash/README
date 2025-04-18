@@ -1,0 +1,19 @@
+========
+README
+========
+
+Changes to PS1 so it will show git status,
+and some eyecandy.
+
+It requires to download some scripts from the git's git repo.
+Links in the file.
+
+
+Just save the file in ~ as ".mini0n-bash" 
+and add this to the end of your .bashrc
+to load the changes:
+
+
+# ==== PS1 with git and eyecandy ====
+source .mini0n-bash.sh
+
