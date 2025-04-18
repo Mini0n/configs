@@ -1,13 +1,13 @@
-# ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
-# init.vim
-#
-# Neovim configuration file 
-# by @mini0n
-#
-# Tested w/ NVIM v0.9.5 @ ubuntu 24.04.02 LTS
-#
-# > init_update: 17.Apr.2025
-# ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+" ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+" init.vim
+"
+" Neovim configuration file
+" by @mini0n
+"
+" Tested w/ NVIM v0.9.5 @ ubuntu 24.04.02 LTS
+"
+" > init_update: 17.Apr.2025
+" ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
 
 
 set showmatch 			        " show mathching
