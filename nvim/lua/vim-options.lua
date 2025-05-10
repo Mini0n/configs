@@ -1,6 +1,12 @@
+-- ======================================================================
+-- NVim general configs
+-- ======================================================================
 
--- NVim Configs
+-- `mapleader` and `maplocalleader`
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
+-- Tab Configs
 vim.cmd("set expandtab")                -- convert tabs to spaces
 vim.cmd("set tabstop=2")                -- number of columns per tab
 vim.cmd("set softtabstop=2")            -- see multiple spaces as tabstops
@@ -19,11 +25,10 @@ vim.cmd("set ignorecase")               -- case insensitive
 vim.cmd("set hlsearch ")                -- highlight search
 vim.cmd("set incsearch")                -- incremental search
 
--- General configs
+-- Clipboard configs
 vim.cmd("set clipboard=unnamedplus")    -- use system clipboard
 
 -- Winbar configs
--- vim.cmd("set winbar=%m%f%r")         -- winbar info
 vim.cmd("set winbar=%=%m\\ %f\\ %r ")   -- winbar info
 vim.cmd("set laststatus=3")             -- only one statusbar for all windows
 
