@@ -6,7 +6,7 @@
 --
 -- Tested w/ NVIM v0.9.5 @ ubuntu 24.04.02 LTS
 --
--- > last_update: 09.May.2025
+-- > last_update: 10.May.2025
 -- > init_update: 17.Apr.2025
 -- ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
 
@@ -16,6 +16,7 @@ require("vim-options")
 
 -- Load lazy.nvim
 require("config.lazy")
+require("keymaps")
 
 -- Load theme
 vim.cmd("colorscheme onedark_vivid")

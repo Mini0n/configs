@@ -18,7 +18,7 @@ vim.cmd("set showmatch")                -- show matching brackets
 vim.cmd("set autoindent")               -- autoindent new lines
 vim.cmd("set cursorline")               -- highlight current cursor line
 -- vim.cmd("set syntax on")               -- syntax highlighting
--- vim.cmd("set cc=100")                  -- set a 100 column boder for better coding style
+vim.cmd("set cc=100")                  -- set a 100 column boder for better coding style
 
 -- Search configs
 vim.cmd("set ignorecase")               -- case insensitive
@@ -31,6 +31,13 @@ vim.cmd("set clipboard=unnamedplus")    -- use system clipboard
 -- Winbar configs
 vim.cmd("set winbar=%=%m\\ %f\\ %r ")   -- winbar info
 vim.cmd("set laststatus=3")             -- only one statusbar for all windows
+
+
+-- Autosaving config
+vim.api.nvim_create_autocmd({"FocusLost", "TextChanged", "InsertLeave"}, {
+  pattern = '*', -- Apply to all buffers
+  command = 'silent! w', -- Save the buffer silently
+})
 
 
 -- Stuff to review -----------------------------------------------------------------------

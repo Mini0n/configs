@@ -1,5 +1,5 @@
 return {
-  "olimorris/onedarkpro.nvim", 
+  "olimorris/onedarkpro.nvim",
   -- tag = 'v2.14.0',
   name = "onedarkpro",
   lazy = false,
