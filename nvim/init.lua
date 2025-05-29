@@ -10,7 +10,6 @@
 -- > init_update: 17.Apr.2025
 -- ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
 
-
 -- Load Nvim configs
 require("vim-options")
 
@@ -20,3 +19,4 @@ require("keymaps")
 
 -- Load theme
 vim.cmd("colorscheme onedark_vivid")
+

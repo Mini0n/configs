@@ -7,5 +7,8 @@ return {
 
   config = function()
     -- TODO: keymap "cc"
+    toggler = {
+      line = "<leader>cc"
+    }
   end,
 }

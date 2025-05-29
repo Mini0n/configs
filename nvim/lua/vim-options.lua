@@ -17,8 +17,9 @@ vim.cmd("set number")                   -- show line numbers
 vim.cmd("set showmatch")                -- show matching brackets
 vim.cmd("set autoindent")               -- autoindent new lines
 vim.cmd("set cursorline")               -- highlight current cursor line
--- vim.cmd("set syntax on")               -- syntax highlighting
-vim.cmd("set cc=100")                  -- set a 100 column boder for better coding style
+vim.cmd("set cc=120")                   -- set a 100 column boder for better coding style
+vim.cmd("set list")                     -- show tabs, spaces and non-breakable characters
+vim.cmd("set lcs+=trail:·")             -- show trailing spaces as dots "·"
 
 -- Search configs
 vim.cmd("set ignorecase")               -- case insensitive
@@ -32,9 +33,14 @@ vim.cmd("set clipboard=unnamedplus")    -- use system clipboard
 vim.cmd("set winbar=%=%m\\ %f\\ %r ")   -- winbar info
 vim.cmd("set laststatus=3")             -- only one statusbar for all windows
 
+-- Exit insert mode when focus is lost
+vim.api.nvim_create_autocmd({"FocusLost", "BufLeave"}, {
+  pattern = '*', -- Apply to all buffers
+  command = 'stopinsert', -- Save the buffer silently
+})
 
--- Autosaving config
-vim.api.nvim_create_autocmd({"FocusLost", "TextChanged", "InsertLeave"}, {
+-- Autosave
+vim.api.nvim_create_autocmd({"InsertLeave", "FocusLost", "BufLeave"}, {
   pattern = '*', -- Apply to all buffers
   command = 'silent! w', -- Save the buffer silently
 })
