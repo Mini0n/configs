@@ -9,10 +9,14 @@ return {
   opts = {
     colors = {
       onedark_vivid = {
-        -- bg = "#282c34", -- original
-        bg = "#21252b", -- darker 1
-        -- bg = "#16181d", -- darker 2
-        -- bg = "#0b0c0e", -- darker 3
+        --[ Based on original bg color ]
+        -- bg = "#282c34", -- original bg color
+        bg = "#21252b",    -- darker 1 bg color
+        -- bg = "#16181d", -- darker 2 bg color
+        -- bg = "#0b0c0e", -- darker 3 bg color
+
+        -- [ Dark grey ]
+        -- bg = "#1b1e23"  -- dark grey
       }
     }
   }
