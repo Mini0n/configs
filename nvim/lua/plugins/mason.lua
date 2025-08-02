@@ -1,28 +1,24 @@
 return {
   {
     "williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      -- "whoIsSethDaniel/mason-tool-installer.nvim",
-    },
     lazy = false,
     config = function()
-      local mason = require("mason")
-      local mason_lspconfig = require("mason-lspconfig")
-
-      mason.setup()
-
-      mason_lspconfig.setup()
+      require("mason").setup()
     end,
   },
 
-  -- {
-  --   "williamboman/mason-lspconfig.nvim",
-  --   lazy = false,
-  --   opts = {
-  --     auto_install = true,
-  --   },
-  -- },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+    lazy = false,
+    config = function()
+      require("mason-lspconfig").setup({
+        auto_install = true,
+      })
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",
