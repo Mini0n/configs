@@ -54,3 +54,9 @@ vim.api.nvim_create_autocmd({"InsertLeave", "FocusLost", "BufLeave"}, {
   pattern = '*',         -- Apply to all buffers
   command = 'silent! w', -- Save the buffer silently
 })
+
+-- Trim trailling whitespaces
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = "%s/\\s\\+$//e",
+})
