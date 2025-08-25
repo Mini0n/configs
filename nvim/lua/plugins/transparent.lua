@@ -1,10 +1,7 @@
 return {
   "xiyaowong/transparent.nvim",
   config = function()
-    local transparent = require("transparent")
-
-    transparent.setup({
-      -- table: default groups
+    require("transparent").setup({
       groups = {
         'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
         'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
@@ -12,17 +9,13 @@ return {
         'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
         'EndOfBuffer',
       },
-      -- table: additional groups that should be cleared
       extra_groups = {
-        "NvimTreeNormal",       -- main tree background
-        "NvimTreeNormalNC",     -- unfocused tree background
-        "NvimTreeEndOfBuffer",  -- the ~ characters at the bottom
+        "NvimTreeNormal",
+        "NvimTreeNormalNC",
+        "NvimTreeEndOfBuffer",
       },
-      -- table: groups you don't want to clear
-      exclude_groups = {},
-      -- function: code to be executed after highlight groups are cleared
-      -- Also the user event "TransparentClear" will be triggered
-      on_clear = function() end,
+      exclude = {},
     })
+    vim.cmd("TransparentEnable")
   end,
 }

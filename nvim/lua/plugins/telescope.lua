@@ -11,7 +11,6 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
     },
 
-    -- configurations
     opts = {
       pickers = {
         find_files = {
@@ -19,27 +18,27 @@ return {
           theme = "dropdown",
         }
       },
-    },
-
-    -- extensions configurations
-    extensions = {
-      fzf = {
-        fuzzy = true,
-        override_generice_sorter = true,
-        override_file_sorter = true,
-        case_mode = "smart_case",
-      },
-
-      ["ui-select"] = {
-        require("telescope.themes").get_dropdown({}),
+      extensions = {
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
+          override_file_sorter = true,
+          case_mode = "smart_case",
+        },
+        ["ui-select"] = {
+          -- Leave empty, set in config below
+        },
       },
     },
 
-    -- more configurations for when `require("telescope").setup()` is needed
-    config = function()
+    config = function(_, opts)
+      local telescope = require("telescope")
+      -- Set ui-select theme after telescope is loaded
+      opts.extensions["ui-select"] = require("telescope.themes").get_dropdown({})
+      telescope.setup(opts)
 
       -- keymaps
-      local builtin =  require("telescope.builtin")
+      local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Telescope find files" })
       vim.keymap.set("n", "<C-e>", builtin.live_grep, { desc = "Telescope live grep" })
       vim.keymap.set("n", "<localleader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -48,8 +47,8 @@ return {
       vim.keymap.set('n', "<localleader>fc", builtin.lsp_document_symbols, { desc = "Telescope LSP document symbols" })
 
       -- extensions loading
-      require('telescope').load_extension("fzf")
-      require("telescope").load_extension("ui-select")
+      telescope.load_extension("fzf")
+      telescope.load_extension("ui-select")
     end,
   }
 }
