@@ -7,7 +7,7 @@ return {
         'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
         'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
         'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
-        'EndOfBuffer',
+        'EndOfBuffer', 'TabLineFill',
       },
       extra_groups = {
         "NvimTreeNormal",

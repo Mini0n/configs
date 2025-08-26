@@ -14,8 +14,6 @@ return {
     opts = {
       pickers = {
         find_files = {
-          hidden = true,
-          theme = "dropdown",
         }
       },
     },
