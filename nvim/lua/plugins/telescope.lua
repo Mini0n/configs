@@ -31,7 +31,7 @@ return {
       },
 
       ["ui-select"] = {
-        require("telescope.themes").get_dropdown({}),
+        -- will be set in config function
       },
     },
 
@@ -48,6 +48,11 @@ return {
       vim.keymap.set('n', "<localleader>fc", builtin.lsp_document_symbols, { desc = "Telescope LSP document symbols" })
 
       -- extensions loading
+      require("telescope").setup {
+        extensions = {
+          ["ui-select"] = require("telescope.themes").get_dropdown({})
+        }
+      }
       require('telescope').load_extension("fzf")
       require("telescope").load_extension("ui-select")
     end,

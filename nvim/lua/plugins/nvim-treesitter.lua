@@ -17,6 +17,10 @@ return {
           use_languagetree = true,
         },
         indent = { enable = false },  -- disable tresitter based indentation
+        ensure_installed = {
+          "typescript",
+          "tsx"
+        },
       })
     end,
 
