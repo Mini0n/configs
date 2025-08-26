@@ -36,6 +36,8 @@ return {
 
     config = function(_, opts)
       local telescope = require("telescope")
+      -- Ensure extensions table exists
+      opts.extensions = opts.extensions or {}
       -- Set ui-select theme after telescope is loaded
       opts.extensions["ui-select"] = require("telescope.themes").get_dropdown({})
       telescope.setup(opts)
@@ -49,12 +51,6 @@ return {
       vim.keymap.set('n', "<localleader>fb", builtin.buffers, { desc = "Telescope buffers" })
       vim.keymap.set('n', "<localleader>fc", builtin.lsp_document_symbols, { desc = "Telescope LSP document symbols" })
 
-      -- extensions loading
-      require("telescope").setup {
-        extensions = {
-          ["ui-select"] = require("telescope.themes").get_dropdown({})
-        }
-      }
       require('telescope').load_extension("fzf")
       require("telescope").load_extension("ui-select")
     end,
