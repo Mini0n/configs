@@ -11,7 +11,6 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
     },
 
-    -- configurations
     opts = {
       pickers = {
         find_files = {
@@ -35,11 +34,14 @@ return {
       },
     },
 
-    -- more configurations for when `require("telescope").setup()` is needed
-    config = function()
+    config = function(_, opts)
+      local telescope = require("telescope")
+      -- Set ui-select theme after telescope is loaded
+      opts.extensions["ui-select"] = require("telescope.themes").get_dropdown({})
+      telescope.setup(opts)
 
       -- keymaps
-      local builtin =  require("telescope.builtin")
+      local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Telescope find files" })
       vim.keymap.set("n", "<C-e>", builtin.live_grep, { desc = "Telescope live grep" })
       vim.keymap.set("n", "<localleader>ff", builtin.find_files, { desc = "Telescope find files" })
