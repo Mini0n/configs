@@ -5,7 +5,7 @@ return {
       { "hrsh7th/cmp-nvim-lsp", lazy = false },
       { "hrsh7th/cmp-buffer", lazy = false },
       { "hrsh7th/nvim-cmp", lazy = false },
-      "williamboman/mason-lspconfig.nvim",
+      { "williamboman/mason-lspconfig.nvim", lazy = false },
     },
     lazy = false,
     config = function()
@@ -17,7 +17,7 @@ return {
       })
 
       -- TypeScript LSP
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
 

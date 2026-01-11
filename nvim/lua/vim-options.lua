@@ -60,3 +60,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   command = "%s/\\s\\+$//e",
 })
+
+-- Associate .jbuilder files with ruby filetype
+vim.filetype.add({
+  extension = {
+    jbuilder = "ruby",
+  },
+})
