@@ -12,9 +12,44 @@ return {
     },
 
     opts = {
+      defaults = {
+        -- File patterns to ignore in all pickers
+        file_ignore_patterns = {
+          "node_modules",    -- Node.js dependencies
+          ".git/",           -- Git repository files
+          ".cache",          -- Cache directories
+          "%.o",             -- Compiled object files
+          "%.a",             -- Static library files
+          "%.out",           -- Executable files
+          "%.class",         -- Java class files
+          "%.pdf",           -- PDF files
+          "%.mkv",           -- Video files
+          "%.mp4",           -- Video files
+          "%.zip",           -- Archive files
+          "dist/",           -- Build output directories
+          "build/",          -- Build directories
+          ".next/",          -- Next.js build files
+          ".nuxt/",          -- Nuxt.js build files
+          ".vuepress/",      -- VuePress build files
+          ".cache/",         -- Various cache directories
+          ".pytest_cache/",  -- Python pytest cache
+          "__pycache__/",    -- Python bytecode cache
+          ".DS_Store",       -- macOS system files
+          "target/",         -- Rust/Cargo build directory
+          ".cargo/",         -- Rust Cargo directory
+          ".rustup/",        -- Rust toolchain directory
+        },
+      },
       pickers = {
         find_files = {
-        }
+          hidden = true,
+          -- Additional find_files specific options can go here
+        },
+        live_grep = {
+          additional_args = function()
+            return { "--hidden" }
+          end,
+        },
       },
     },
 
