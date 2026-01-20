@@ -13,8 +13,9 @@ return {
 
       vim.lsp.config('ruby_lsp', {
         capabilities = capabilities,
-        cmd = { 'bundle', 'exec', 'ruby-lsp' },
-        root_dir = vim.fn.getcwd(),
+        cmd = { 'bash', '-l', '-c', 'ruby-lsp' },
+        filetypes = { 'ruby', 'rakefile' },
+        root_markers = { 'Gemfile', '.git' },
         settings = {
           ruby_lsp = {
             formatter = 'rubocop',
