@@ -1,0 +1,43 @@
+theme = GitHub Dark
+font-size = 8.5
+background-opacity = 0.85
+
+# Tweaks to theme
+background = #010109
+
+# Terminal 16-color ANSI palette tweaks
+# --- Custom ANSI Color Palette ---
+
+# Black
+palette = 0=#2C313C
+# Red
+palette = 1=#C9323F
+# Green
+palette = 2=#73B544
+# Yellow / Orange
+palette = 3=#D1813D
+# Blue
+palette = 4=#3C81E3
+# Magenta / Purple
+palette = 5=#8627D8
+# Cyan / Teal
+palette = 6=#2E9491
+# White / Light Gray
+palette = 7=#7E898F
+
+# Bright Black / Dark Gray
+palette = 8=#474D50
+# Bright Red / Pinkish Red
+palette = 9=#D06286
+# Bright Green
+palette = 10=#55BA74
+# Bright Yellow / Gold
+palette = 11=#C0A46C
+# Bright Blue / Sky Blue
+palette = 12=#33A9DC
+# Bright Magenta / Violet
+palette = 13=#C04BD5
+# Bright Cyan / Mint
+palette = 14=#2EBAAD
+# Bright White / Pure White
+palette = 15=#FFFFFF
